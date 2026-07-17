@@ -8,7 +8,7 @@
 - Conteúdo criativo
 - Lifestyle e moda masculina
 - Bastidores
-- Seção especial “Á DE BRANCO | EQUIPÊÊ? 🕊️”
+- Seção especial “TÁ DE BRANCO | EQUIPÊÊ? 🕊️”
 - Portfólio visual
 - Processo de produção
 - Formulário de orçamento
