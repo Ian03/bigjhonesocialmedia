@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Big Jhone — Social Media, Filmmaker, Lifestyle e Moda Masculina. Conteúdo criativo para marcas e pessoas.">
+  <title>Big Jhone | Social Media & Filmmaker</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #080808;
+      --dark: #121212;
+      --gray: #252525;
+      --light: #f4f4f1;
+      --white: #ffffff;
+      --muted: #9b9b9b;
+      --line: rgba(255,255,255,.13);
+      --accent: #d9ff3f;
+      --ink: #171717;
+      --shadow: 0 26px 70px rgba(0,0,0,.28);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: white;
+      font-family: "Inter", sans-serif;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { width: 100%; display: block; object-fit: cover; }
+    button, input, select, textarea { font: inherit; }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .ticker {
+      overflow: hidden;
+      padding: 11px 0;
+      color: var(--black);
+      background: var(--accent);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .ticker-track {
+      width: max-content;
+      animation: ticker 20s linear infinite;
+    }
+
+    @keyframes ticker {
+      to { transform: translateX(-50%); }
+    }
+
+    header {
+      position: absolute;
+      inset: 36px 0 auto;
+      z-index: 30;
+    }
+
+    nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Oswald", sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 50%;
+      font-size: 15px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .btn {
+      min-height: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      border: 0;
+      border-radius: 999px;
+      color: var(--black);
+      background: var(--accent);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .22s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(.9);
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,.38);
+      background: rgba(255,255,255,.06);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero {
+      min-height: 860px;
+      position: relative;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(5,5,5,.98) 0%, rgba(5,5,5,.88) 43%, rgba(5,5,5,.20) 100%),
+        url("Screenshots/1.png") 82% 40%/auto 108% no-repeat,
+        var(--black);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(transparent 62%, rgba(0,0,0,.88)),
+        radial-gradient(circle at 75% 30%, rgba(217,255,63,.10), transparent 25rem);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 930px;
+      padding: 220px 0 105px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: "Oswald", sans-serif;
+      line-height: .96;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-top: 22px;
+      max-width: 930px;
+      font-size: clamp(68px, 9vw, 128px);
+      letter-spacing: -.045em;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 690px;
+      margin: 28px 0 34px;
+      color: rgba(255,255,255,.75);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 35px;
+      color: rgba(255,255,255,.68);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    section { padding: 106px 0; }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 74px;
+      align-items: center;
+    }
+
+    .portrait-wrap {
+      position: relative;
+      min-height: 620px;
+    }
+
+    .portrait-main {
+      width: 82%;
+      height: 590px;
+      object-position: 50% 18%;
+      filter: grayscale(100%);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-small {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 48%;
+      height: 285px;
+      object-position: 50% 22%;
+      border: 8px solid var(--black);
+      border-radius: 20px;
+      filter: grayscale(100%);
+      box-shadow: var(--shadow);
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-top: 14px;
+      font-size: clamp(48px, 6vw, 82px);
+      letter-spacing: -.035em;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.82;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #d4d4d4;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .services {
+      background: var(--light);
+      color: var(--ink);
+    }
+
+    .section-head {
+      max-width: 800px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-head p {
+      color: #696969;
+      line-height: 1.75;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      min-height: 390px;
+      position: relative;
+      display: grid;
+      align-content: space-between;
+      padding: 27px;
+      border-radius: var(--radius);
+      background: white;
+      transition: .25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px rgba(0,0,0,.10);
+    }
+
+    .service-number {
+      color: #9a9a9a;
+      font-family: "Oswald", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      margin: 26px 0;
+      border-radius: 17px;
+      color: var(--black);
+      background: var(--accent);
+      font-size: 25px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 34px;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: #717171;
+      font-size: 14px;
+      line-height: 1.62;
+    }
+
+    .white-friday {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      background: white;
+      color: black;
+    }
+
+    .white-friday::before,
+    .white-friday::after {
+      content: "🕊️";
+      position: absolute;
+      opacity: .12;
+      font-size: 170px;
+    }
+
+    .white-friday::before {
+      left: 4%;
+      top: 5%;
+      transform: rotate(-18deg);
+    }
+
+    .white-friday::after {
+      right: 4%;
+      bottom: 2%;
+      transform: rotate(15deg);
+    }
+
+    .white-content {
+      position: relative;
+      z-index: 2;
+      max-width: 920px;
+      margin: auto;
+    }
+
+    .friday-label {
+      display: inline-block;
+      margin-bottom: 23px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      color: white;
+      background: black;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .white-friday h2 {
+      font-size: clamp(58px, 8vw, 112px);
+      letter-spacing: -.045em;
+    }
+
+    .white-friday p {
+      max-width: 640px;
+      margin: 26px auto 0;
+      color: #666;
+      line-height: 1.75;
+    }
+
+    .portfolio {
+      background: var(--dark);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+    }
+
+    .portfolio-stack {
+      display: grid;
+      gap: 22px;
+    }
+
+    .portfolio-card {
+      position: relative;
+      min-height: 315px;
+      overflow: hidden;
+      border-radius: 22px;
+      background: #222;
+    }
+
+    .portfolio-card.large { min-height: 652px; }
+
+    .portfolio-card img {
+      height: 100%;
+      filter: grayscale(100%);
+      transition: .4s ease;
+    }
+
+    .portfolio-card.large img { object-position: 50% 30%; }
+
+    .portfolio-card:hover img {
+      filter: grayscale(0);
+      transform: scale(1.035);
+    }
+
+    .portfolio-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 50%, rgba(0,0,0,.82));
+    }
+
+    .portfolio-caption {
+      position: absolute;
+      z-index: 2;
+      inset: auto 24px 24px;
+    }
+
+    .portfolio-caption span {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .portfolio-caption h3 {
+      margin-top: 8px;
+      font-size: 34px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr .95fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .steps {
+      display: grid;
+      gap: 19px;
+      margin-top: 36px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .step-number {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--black);
+      background: var(--accent);
+      font-family: "Oswald", sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .step strong {
+      display: block;
+      margin: 4px 0 5px;
+      font-size: 17px;
+    }
+
+    .step span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .process-photo {
+      min-height: 590px;
+      border-radius: 24px;
+      background:
+        linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.22)),
+        url("Screenshots/3.png") center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .contact {
+      background: var(--light);
+      color: var(--ink);
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      overflow: hidden;
+      border-radius: 28px;
+      background: white;
+      box-shadow: 0 24px 60px rgba(0,0,0,.12);
+    }
+
+    .contact-info {
+      padding: 56px;
+      color: white;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(217,255,63,.15), transparent 14rem),
+        var(--black);
+    }
+
+    .contact-info h2 {
+      margin-top: 15px;
+      font-size: 58px;
+    }
+
+    .contact-info p {
+      color: rgba(255,255,255,.68);
+      line-height: 1.72;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 13px;
+      margin-top: 31px;
+    }
+
+    .info-list div {
+      padding: 15px 17px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 13px;
+      background: rgba(255,255,255,.06);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    form { padding: 56px; }
+
+    form h3 {
+      font-size: 42px;
+      margin-bottom: 8px;
+    }
+
+    .form-subtitle {
+      margin: 0 0 29px;
+      color: #747474;
+      line-height: 1.6;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      min-height: 52px;
+      padding: 0 15px;
+      border: 1px solid rgba(0,0,0,.12);
+      border-radius: 11px;
+      background: white;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+      padding-top: 14px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #9bae1f;
+      box-shadow: 0 0 0 4px rgba(217,255,63,.20);
+    }
+
+    .form-footer {
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      margin-top: 21px;
+    }
+
+    .form-note {
+      color: #777;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .success {
+      display: none;
+      margin-top: 17px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      color: #345640;
+      background: #edf7ef;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 40px 0;
+      color: rgba(255,255,255,.62);
+      background: #050505;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 13px;
+    }
+
+    footer .logo {
+      color: white;
+      font-size: 23px;
+    }
+
+    @media (max-width: 940px) {
+      .nav-links a:not(.btn) { display: none; }
+      .intro-grid, .process-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-card.large { min-height: 500px; }
+    }
+
+    @media (max-width: 620px) {
+      .container { width: min(100% - 26px, 1180px); }
+      nav { min-height: 72px; }
+      .logo { font-size: 20px; }
+      .logo-mark { width: 36px; height: 36px; }
+      .nav-links .btn { min-height: 44px; padding: 0 14px; font-size: 11px; }
+      .hero { min-height: 760px; }
+      .hero-content { padding: 180px 0 72px; }
+      .hero p { font-size: 16px; }
+      section { padding: 78px 0; }
+      .portrait-wrap { min-height: 450px; }
+      .portrait-main { height: 420px; }
+      .portrait-small { height: 220px; }
+      .portfolio-card.large { min-height: 420px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .contact-info, form { padding: 38px 24px; }
+      .form-footer, .footer-row { align-items: stretch; flex-direction: column; }
+      .form-footer .btn { width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ticker">
+    <div class="ticker-track">
+      Á DE BRANCO | EQUIPÊÊ? 🕊️ &nbsp;&nbsp;&nbsp; LIFESTYLE • MODA MASCULINA • SOCIAL MEDIA • FILMMAKER &nbsp;&nbsp;&nbsp;
+      Á DE BRANCO | EQUIPÊÊ? 🕊️ &nbsp;&nbsp;&nbsp; LIFESTYLE • MODA MASCULINA • SOCIAL MEDIA • FILMMAKER &nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+
+  <header>
+    <nav class="container">
+      <a class="logo" href="#inicio">
+        <span class="logo-mark">BJ</span>
+        <span>Big Jhone</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#portfolio">Conteúdo</a>
+        <a class="btn" href="#contato">Criar comigo</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <span class="eyebrow">Social Media & Filmmaker</span>
+        <h1>Conteúdo com <span>presença</span>, estilo e identidade.</h1>
+
+        <p>
+          Lifestyle, moda masculina, bastidores e produção criativa para transformar
+          ideias em conteúdo que chama atenção e fortalece marcas.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn" href="#contato">Solicitar orçamento</a>
+          <a class="btn btn-outline" href="https://www.instagram.com/bigjhoneofc/" target="_blank" rel="noreferrer">
+            Ver Instagram
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span>🎥 Lifestyle</span>
+          <span>🎬 Filmmaker</span>
+          <span>✨ Conteúdo criativo</span>
+          <span>📍 UP</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container intro-grid">
+        <div class="portrait-wrap">
+          <img
+            class="portrait-main"
+            src="Screenshots/6.png"
+            alt="Big Jhone em um ambiente de moda"
+            loading="lazy"
+          >
+          <img
+            class="portrait-small"
+            src="Screenshots/4.png"
+            alt="Big Jhone usando um look social"
+            loading="lazy"
+          >
+        </div>
+
+        <div>
+          <span class="section-kicker">Big Jhone</span>
+          <h2 class="section-title">Imagem, movimento e personalidade.</h2>
+
+          <p class="lead">
+            Conteúdo criativo não é apenas gravar e publicar. É entender a mensagem,
+            construir uma identidade visual e transformar momentos em uma comunicação
+            que conecta com o público.
+          </p>
+
+          <p class="lead">
+            A proposta reúne social media, produção audiovisual, lifestyle, moda
+            masculina e bastidores para marcas, profissionais e projetos que querem
+            aparecer de forma mais autêntica.
+          </p>
+
+          <div class="pill-row">
+            <span class="pill">Social media</span>
+            <span class="pill">Filmmaker</span>
+            <span class="pill">Moda masculina</span>
+            <span class="pill">Lifestyle</span>
+            <span class="pill">Bastidores</span>
+            <span class="pill">Reels</span>
+          </div>
+
+          <a class="btn" href="#contato">Falar sobre um projeto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker" style="color:#738500">Serviços criativos</span>
+          <h2 class="section-title">Conteúdo pensado para marcar presença.</h2>
+          <p>
+            Os formatos e condições de cada trabalho devem ser alinhados conforme
+            objetivo, quantidade de entregas, local e complexidade da produção.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-number">01</span>
+            <div>
+              <div class="service-icon">📱</div>
+              <h3>Social Media</h3>
+              <p>
+                Planejamento, ideias, organização de conteúdo e apoio na construção
+                de uma presença mais consistente nas redes sociais.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">02</span>
+            <div>
+              <div class="service-icon">🎬</div>
+              <h3>Filmmaker</h3>
+              <p>
+                Captação e edição de vídeos verticais, bastidores, campanhas,
+                coberturas e materiais para redes sociais.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">03</span>
+            <div>
+              <div class="service-icon">✨</div>
+              <h3>Conteúdo criativo</h3>
+              <p>
+                Desenvolvimento de conceitos, roteiros e formatos que combinam
+                informação, estética, estilo e personalidade.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="white-friday">
+      <div class="container white-content">
+        <span class="friday-label">Toda sexta-feira</span>
+        <h2>Á DE BRANCO<br>| EQUIPÊÊ? 🕊️</h2>
+        <p>
+          Um bordão que se transforma em identidade, comunidade e presença.
+          Sexta é dia de branco, conteúdo e energia da equipe.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Universo criativo</span>
+          <h2 class="section-title">Moda, bastidores e movimento.</h2>
+          <p>
+            Uma vitrine visual para apresentar diferentes formatos de conteúdo
+            produzidos para o perfil pessoal, marcas e parceiros.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card large">
+            <img
+              src="Screenshots/5.png"
+              alt="Big Jhone em um ambiente de lifestyle"
+              loading="lazy"
+            >
+            <div class="portfolio-caption">
+              <span>Moda masculina</span>
+              <h3>Estilo com identidade</h3>
+            </div>
+          </article>
+
+          <div class="portfolio-stack">
+            <article class="portfolio-card">
+              <img
+                src="Screenshots/3.png"
+                alt="Estação de trabalho de social media"
+                loading="lazy"
+              >
+              <div class="portfolio-caption">
+                <span>Social media</span>
+                <h3>Planejamento e criação</h3>
+              </div>
+            </article>
+
+            <article class="portfolio-card">
+              <img
+                src="Screenshots/2.png"
+                alt="Café durante a rotina criativa"
+                loading="lazy"
+              >
+              <div class="portfolio-caption">
+                <span>Lifestyle</span>
+                <h3>Bastidores reais</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="processo">
+      <div class="container process-grid">
+        <div>
+          <span class="section-kicker">Como funciona</span>
+          <h2 class="section-title">Da ideia ao conteúdo publicado.</h2>
+
+          <p class="lead">
+            Cada projeto começa com o entendimento do objetivo, da linguagem da marca
+            e do tipo de material necessário.
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div>
+                <strong>Briefing</strong>
+                <span>Objetivo, público, estilo, referência e resultado esperado.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div>
+                <strong>Ideia e planejamento</strong>
+                <span>Definição de conceito, formato, roteiro e organização da produção.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div>
+                <strong>Captação</strong>
+                <span>Produção das imagens, vídeos, cenas e bastidores necessários.</span>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div>
+                <strong>Edição e entrega</strong>
+                <span>Montagem do conteúdo e alinhamento do material final.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-photo" aria-label="Produção de vídeo com câmera"></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="container contact-wrap">
+        <aside class="contact-info">
+          <span class="eyebrow">Vamos criar?</span>
+          <h2>Conte sua ideia.</h2>
+
+          <p>
+            Preencha as informações iniciais. Ao enviar, uma mensagem será preparada
+            para continuar o atendimento pelo WhatsApp.
+          </p>
+
+          <div class="info-list">
+            <div>✓ Social media e planejamento</div>
+            <div>✓ Captação e edição de vídeos</div>
+            <div>✓ Conteúdo para marcas e profissionais</div>
+            <div>✓ Moda, lifestyle e bastidores</div>
+          </div>
+        </aside>
+
+        <form id="projectForm">
+          <h3>Solicitar orçamento</h3>
+          <p class="form-subtitle">Os campos marcados com * são obrigatórios.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Nome *</label>
+              <input id="name" name="name" type="text" required placeholder="Seu nome">
+            </div>
+
+            <div class="field">
+              <label for="phone">WhatsApp *</label>
+              <input id="phone" name="phone" type="tel" required placeholder="(00) 00000-0000">
+            </div>
+
+            <div class="field">
+              <label for="business">Marca ou perfil</label>
+              <input id="business" name="business" type="text" placeholder="Nome da marca ou @perfil">
+            </div>
+
+            <div class="field">
+              <label for="service">Serviço desejado *</label>
+              <select id="service" name="service" required>
+                <option value="">Selecione</option>
+                <option>Social media</option>
+                <option>Filmmaker</option>
+                <option>Captação para Reels</option>
+                <option>Edição de vídeo</option>
+                <option>Cobertura e bastidores</option>
+                <option>Conteúdo de moda ou lifestyle</option>
+                <option>Outro projeto</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="deadline">Data ou prazo</label>
+              <input id="deadline" name="deadline" type="date">
+            </div>
+
+            <div class="field">
+              <label for="location">Local do projeto</label>
+              <input id="location" name="location" type="text" placeholder="Cidade ou local">
+            </div>
+
+            <div class="field full">
+              <label for="details">Descreva o projeto *</label>
+              <textarea
+                id="details"
+                name="details"
+                required
+                placeholder="Ex.: preciso produzir quatro vídeos verticais para divulgar minha marca..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+            <span class="form-note">
+              Configure o número oficial no final do arquivo HTML.
+            </span>
+          </div>
+
+          <div class="success" id="successMessage">
+            A mensagem foi preparada e copiada. Adicione o WhatsApp oficial no código para abrir a conversa automaticamente.
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="logo" href="#inicio">
+        <span class="logo-mark">BJ</span>
+        <span>Big Jhone</span>
+      </a>
+
+      <span>Social Media • Filmmaker • Lifestyle • Moda Masculina</span>
+
+      <a
+        href="https://www.instagram.com/bigjhoneofc/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        @bigjhoneofc
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById("projectForm");
+    const success = document.getElementById("successMessage");
+    const deadline = document.getElementById("deadline");
+
+    deadline.min = new Date().toISOString().split("T")[0];
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const data = new FormData(form);
+      const rawDate = data.get("deadline");
+
+      const formattedDate = rawDate
+        ? new Date(rawDate + "T12:00:00").toLocaleDateString("pt-BR")
+        : "A combinar";
+
+      const message = [
+        "Olá, Big Jhone! Gostaria de solicitar um orçamento.",
+        "",
+        `Nome: ${data.get("name")}`,
+        `WhatsApp: ${data.get("phone")}`,
+        `Marca ou perfil: ${data.get("business") || "Não informado"}`,
+        `Serviço: ${data.get("service")}`,
+        `Data ou prazo: ${formattedDate}`,
+        `Local: ${data.get("location") || "Não informado"}`,
+        `Projeto: ${data.get("details")}`
+      ].join("\n");
+
+      // Informe o WhatsApp oficial com DDI e DDD, somente números.
+      // Exemplo: const whatsappNumber = "5575999999999";
+      const whatsappNumber = "";
+
+      if (whatsappNumber) {
+        window.open(
+          `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+          "_blank"
+        );
+      } else {
+        navigator.clipboard?.writeText(message);
+        success.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
