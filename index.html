@@ -595,6 +595,35 @@
       font-weight: 700;
     }
 
+    .whatsapp-cta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 24px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      color: white;
+      background: #25d366;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .22s ease;
+    }
+
+    .whatsapp-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(.95);
+    }
+
+    .whatsapp-cta > span:first-child {
+      font-size: 24px;
+    }
+
+    .whatsapp-cta strong {
+      display: block;
+      margin-top: 3px;
+      font-size: 18px;
+    }
+
     form { padding: 56px; }
 
     form h3 {
@@ -1000,6 +1029,19 @@
             <div>✓ Conteúdo para marcas e profissionais</div>
             <div>✓ Moda, lifestyle e bastidores</div>
           </div>
+
+          <a
+            class="whatsapp-cta"
+            href="https://wa.me/5575981808371?text=Ol%C3%A1%2C%20Big%20Jhone!%20Gostaria%20de%20falar%20sobre%20um%20projeto%20ou%20agendamento."
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>💬</span>
+            <span>
+              Contato e agendamentos
+              <strong>(75) 98180-8371</strong>
+            </span>
+          </a>
         </aside>
 
         <form id="projectForm">
@@ -1060,12 +1102,12 @@
           <div class="form-footer">
             <button class="btn" type="submit">Enviar pelo WhatsApp</button>
             <span class="form-note">
-              Configure o número oficial no final do arquivo HTML.
+              Ao enviar, a conversa abre no WhatsApp (75) 98180-8371.
             </span>
           </div>
 
           <div class="success" id="successMessage">
-            A mensagem foi preparada e copiada. Adicione o WhatsApp oficial no código para abrir a conversa automaticamente.
+            A mensagem foi preparada. Abrindo a conversa no WhatsApp...
           </div>
         </form>
       </div>
@@ -1120,9 +1162,8 @@
         `Projeto: ${data.get("details")}`
       ].join("\n");
 
-      // Informe o WhatsApp oficial com DDI e DDD, somente números.
-      // Exemplo: const whatsappNumber = "5575999999999";
-      const whatsappNumber = "";
+      // WhatsApp oficial com DDI (55) e DDD (75), somente números.
+      const whatsappNumber = "5575981808371";
 
       if (whatsappNumber) {
         window.open(
